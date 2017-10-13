@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    Ascii85 (1.0.2)
+    afm (0.2.2)
+    cmdparse (3.0.3)
+    hashery (2.1.2)
+    hexapdf (0.5.0)
+      cmdparse (~> 3.0, >= 3.0.3)
+    pdf-reader (2.0.0)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
+    ruby-rc4 (0.1.5)
+    ttfunk (1.5.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hexapdf
+  pdf-reader
+
+BUNDLED WITH
+   1.15.4
