@@ -68,10 +68,14 @@ matching_pages =
   find_matching_pages document: document,
                       potential_matches: potential_matches
 
-puts <<~MESSAGE
+puts matching_pages.any? ? <<~FOUND_MESSAGE : <<~NOT_FOUND_MESSAGE
   Found occurrences of ∫ on pages #{matching_pages.map { |i| i + 1 }} of #{ARGV[0]}.
   Saving them to #{ARGV[1]}...
-MESSAGE
+FOUND_MESSAGE
+  Found no occurrences of ∫ in #{ARGV[0]}.
+NOT_FOUND_MESSAGE
+
+exit unless matching_pages.any?
 
 arrange_pages document: document,
               page_indices: matching_pages
